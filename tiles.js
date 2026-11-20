@@ -10,7 +10,9 @@ export const TILES = [
   {
     emoji: "🥔",
     title: "Poteto Mode",
-    blurb: "The Playbook Quest, a game that explains each playbook.",
+    blurb: "A game that teaches the playbooks in pstack, Lauren Tan's AI coding skills.",
+    description:
+      "The Playbook Quest, a learner's game about the /poteto-mode playbooks in pstack, the AI coding skills Lauren Tan (poteto) built at Cursor. Pick a level and watch the potato walk through the steps, or turn on CS mode for a harder version.",
     href: "https://georgeroberts1.github.io/poteto-playbook-quest/",
     corners: [[356, 335], [434, 319], [439, 366], [363, 383]],
   },
@@ -22,5 +24,26 @@ export const TILES = [
       "A mobile-first tooth brushing tracker for young children. Parents open it on their phone at the bathroom sink — the kid watches their favourite brushing video, then taps to earn a gold star for morning and evening brushes throughout the week.",
     href: "https://brushing-stars.vercel.app/",
     corners: [[568, 413], [615, 401], [617, 436], [571, 451]],
+  },
+  {
+    emoji: "🚶",
+    title: "Thames Path",
+    blurb: "A walk tracker for the Thames Path.",
+    href: "https://walk-tracker-omega.vercel.app/?completed=7%2C8%2C9%2C10%2C11%2C12%2C13%2C14",
+    corners: [[498, 218], [554, 210], [555, 248], [500, 257]],
+  },
+  {
+    emoji: "🍽️",
+    title: "Restaurant Metrix",
+    blurb: "A restaurant rating aggregator.",
+    href: "https://restaurant-metrix-xiwa.vercel.app/",
+    corners: [[380, 478], [445, 457], [448, 493], [384, 516]],
+  },
+  {
+    emoji: "🎶",
+    title: "Choirmash",
+    blurb: "An app for choir singers to sing together remotely.",
+    href: "https://choirmash-v2.vercel.app/",
+    corners: [[612, 287], [640, 284], [640, 316], [614, 319]],
   },
 ];

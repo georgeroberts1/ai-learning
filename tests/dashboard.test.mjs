@@ -30,6 +30,29 @@ test("every tile has four corners inside the photo", () => {
   }
 });
 
+// On a 390px phone the photo is cropped to start at x=300 and drawn at 390/1100 of its size,
+// and each tile's tap circle is 21px in radius. Tiles must stay in the crop and 42px apart there.
+const PHONE_CROP_LEFT = 300;
+const MIN_CENTRE_GAP = 42 / (390 / 1100);
+
+test("every tile is inside the phone crop", () => {
+  for (const t of TILES) {
+    for (const [x] of t.corners) assert.ok(x >= PHONE_CROP_LEFT, `${t.title}: x=${x} is cropped off on phones`);
+  }
+});
+
+test("tile tap circles on a phone do not overlap", () => {
+  const centres = TILES.map((t) => {
+    const { cx, cy } = geometry(t.corners, WALL);
+    return [t.title, (cx / 100) * WALL.width, (cy / 100) * WALL.height];
+  });
+  for (const [i, [a, ax, ay]] of centres.entries()) {
+    for (const [b, bx, by] of centres.slice(i + 1)) {
+      assert.ok(Math.hypot(ax - bx, ay - by) >= MIN_CENTRE_GAP, `${a} and ${b} are too close for a phone tap`);
+    }
+  }
+});
+
 test("geometry gives the centre and clip of a tile as percentages of the photo", () => {
   const g = geometry([[0, 0], [100, 0], [100, 50], [0, 50]], { width: 200, height: 100 });
   assert.equal(g.cx, 25);

@@ -14,6 +14,7 @@ const spot = (t, i) => {
   const { points, clip, cx, cy } = geometry(t.corners, WALL);
   return `<div class="spot" data-id="${i}" style="--cx:${cx}%;--cy:${cy}%;--clip:${clip}">
   <svg viewBox="0 0 ${WALL.width} ${WALL.height}" preserveAspectRatio="none" aria-hidden="true"><polygon points="${points}"/></svg>
+  <span class="glyph" aria-hidden="true">${esc(t.emoji)}</span>
   <button class="pin" type="button" aria-expanded="false" aria-label="Show ${esc(t.title)}"></button>
   <a class="tag" ${link(t)}>${text(t)}</a>
 </div>`;
