@@ -9,6 +9,8 @@ npm start    # serves docs/ at http://localhost:8000
 npm test     # one test per playbook, checked against the real playbook files
 ```
 
-The page is static files in `docs/`, so GitHub Pages can serve it directly (Settings, Pages, deploy from branch, `/docs`).
+The page is static files in `docs/`, so GitHub Pages can serve it directly (Settings, Pages, source GitHub Actions, which the workflow needs).
 
 The tests read the installed pstack plugin from `~/.claude/plugins/cache/cursor-plugins/pstack`. Set `POTETO_PLAYBOOKS` to point at another copy of the `playbooks/` folder.
+
+CI (`.github/workflows/ci.yml`) runs the tests on every PR and push, and weekly to catch upstream playbook changes. Pushes to `main` deploy `docs/` to GitHub Pages only when the tests pass. In CI the tests check out `cursor/plugins` and set `POTETO_PLAYBOOKS` to its playbooks.
