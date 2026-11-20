@@ -75,8 +75,9 @@ main { max-width: 1800px; margin: 0 auto; }
   main { min-height: 100svh; display: flex; flex-direction: column; justify-content: center; padding-block: 16px; }
   .wall { aspect-ratio: 1100 / 1050; }
   .layer { inset: auto; top: 0; left: calc(-300 / 1100 * 100%); width: calc(1400 / 1100 * 100%); height: 100%; }
-  .links { display: grid; gap: 12px; padding: 16px 16px 4px; }
+  .links { display: grid; position: absolute; left: 12px; right: 12px; bottom: 44px; }
   .card:not(.open) { display: none; }
+  .card.open { animation: rise .25s cubic-bezier(.2, .8, .2, 1); }
   .card {
     display: flex; align-items: center; gap: 14px; padding: 16px 18px; background: var(--enamel); color: var(--ink);
     border-radius: 10px; text-decoration: none; box-shadow: inset 0 0 0 1.5px var(--edge), 0 10px 24px -12px rgb(0 0 0 / .7);
@@ -88,4 +89,5 @@ main { max-width: 1800px; margin: 0 auto; }
   .card .tag-blurb { font-size: .9rem; }
   .card svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 }
-@media (prefers-reduced-motion: reduce) { .spot::after { animation: none; } .tag { transition: none; } }
+@keyframes rise { from { opacity: 0; transform: translateY(8px); } }
+@media (prefers-reduced-motion: reduce) { .spot::after, .card.open { animation: none; } .tag { transition: none; } }
