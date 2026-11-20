@@ -10,11 +10,15 @@ const root = resolve(import.meta.dirname, "..");
 const pages = Object.values(config.build.rollupOptions.input);
 
 test("every tile links to a folder with an index.html that Vite builds", () => {
-  for (const t of TILES) {
+  for (const t of TILES.filter((t) => !/^https?:/.test(t.href))) {
     const page = resolve(root, t.href, "index.html");
     assert.ok(existsSync(page), `${t.title}: ${page} does not exist`);
     assert.ok(pages.includes(page), `${t.title}: ${t.href} is missing from vite.config.js`);
   }
+});
+
+test("external tile links use https", () => {
+  for (const t of TILES.filter((t) => /^https?:/.test(t.href))) assert.equal(new URL(t.href).protocol, "https:", `${t.title} must link over https`);
 });
 
 test("every tile has four corners inside the photo", () => {
