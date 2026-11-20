@@ -8,6 +8,7 @@
     "optimize": "node scripts/optimize-image.mjs",
     "audit:page": "node scripts/audit.mjs",
     "tile": "node scripts/tile-corners.mjs",
+    "wall": "node scripts/wall-grid.mjs",
     "build": "vite build",
     "preview": "vite preview",
     "test": "node --test \"tests/*.test.mjs\""

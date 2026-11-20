@@ -9,12 +9,15 @@ pnpm build    # static site in dist/
 pnpm optimize # rebuild the responsive photo files in public/img from assets/source
 pnpm audit:page [url] [runs]  # Lighthouse mobile audit of a running `pnpm preview` (THROTTLING=devtools for real throttling)
 pnpm tile <x> <y>  # prints the corners of the photo tile under a point, for tiles.js
+pnpm wall out.png [x y w h]  # draws the photo with a grid and the taken tiles in red
 pnpm test     # checks every tile links somewhere real and every photo file exists
 ```
 
 ## Add a new project
 
-Hosted elsewhere (the usual case): add an entry to `tiles.js` with its https URL.
+In Claude Code, paste the URL with a few words about it ("add a tile for https://... , a recipe app"). The `add-tile` skill in `.claude/skills` writes the entry, picks a free tile, checks it and opens a PR.
+
+By hand, for a project hosted elsewhere (the usual case), add an entry to `tiles.js` with its https URL.
 
 Built in this repo:
 
