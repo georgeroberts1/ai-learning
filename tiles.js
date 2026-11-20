@@ -1,9 +1,17 @@
-// Add a tile here to add it to the dashboard. `href` is a folder with its own index.html.
+// The wall photo is 1400x1050 here, whatever its file size. Each link is the four corners of
+// one tile on the photo, clockwise from top left, measured in those pixels.
+// Add a link by adding an entry. `href` is a folder with its own index.html.
+export const WALL = { width: 1400, height: 1050 };
+
+// The glass of the mirror, in the same pixels. The page title is written on it.
+export const MIRROR = [[1015, 90], [1215, 90], [1160, 420], [978, 392]];
+
 export const TILES = [
   {
     emoji: "🥔",
-    title: "Poteto Mode: the Playbook Quest",
-    blurb: "A game that explains each /poteto-mode playbook, with a harder CS mode.",
+    title: "Poteto Mode",
+    blurb: "The Playbook Quest, a game that explains each playbook.",
     href: "poteto-quest/",
+    corners: [[356, 335], [434, 319], [439, 366], [363, 383]],
   },
 ];

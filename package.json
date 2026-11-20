@@ -5,11 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "optimize": "node scripts/optimize-image.mjs",
+    "audit:page": "node scripts/audit.mjs",
     "build": "vite build",
     "preview": "vite preview",
     "test": "node --test \"tests/*.test.mjs\""
   },
   "devDependencies": {
+    "sharp": "^0.35.5",
     "vite": "^8.3.8"
   }
 }
