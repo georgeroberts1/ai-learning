@@ -46,4 +46,11 @@ export const TILES = [
     href: "https://choirmash-v2.vercel.app/",
     corners: [[612, 287], [640, 284], [640, 316], [614, 319]],
   },
+  {
+    emoji: "⚽",
+    title: "Match Ranker",
+    blurb: "Ranks Premier League football matches.",
+    href: "https://match-ranker.vercel.app/",
+    corners: [[719, 391], [750, 393], [749, 423], [719, 421]],
+  },
 ];
