@@ -1,6 +1,6 @@
 # AI Stuff
 
-A personal collection of AI stuff (games, trackers and experiments), built with Vite and pnpm. The home page is a photo of a tiled bathroom wall, and each glowing tile on it links to its own project.
+A personal collection of AI stuff (games, trackers and experiments), built with Vite and pnpm. The home page is a photo of a tiled bathroom wall, and each glowing tile on it shows its project's emoji and links to it.
 
 ```text
 pnpm install
@@ -28,7 +28,7 @@ Either way, give the entry the four corners of a tile on the photo (clockwise fr
 
 Each one lives in its own repo and is linked from a tile.
 
-- 🥔 [Poteto Mode: the Playbook Quest](https://georgeroberts1.github.io/poteto-playbook-quest/) ([repo](https://github.com/georgeroberts1/poteto-playbook-quest)) is a game that explains each `/poteto-mode` playbook from [pstack](https://github.com/cursor/plugins/tree/main/pstack), with a harder CS mode.
+- 🥔 [Poteto Mode: the Playbook Quest](https://georgeroberts1.github.io/poteto-playbook-quest/) ([repo](https://github.com/georgeroberts1/poteto-playbook-quest)) is a learner's game about the `/poteto-mode` playbooks in [pstack](https://github.com/cursor/plugins/tree/main/pstack), the AI coding skills Lauren Tan (poteto) built at Cursor. It has a harder CS mode.
 - ⭐ [Brushing Stars](https://brushing-stars.vercel.app/) is a mobile-first tooth brushing tracker for young children.
 - 🚶 [Thames Path](https://walk-tracker-omega.vercel.app/?completed=7%2C8%2C9%2C10%2C11%2C12%2C13%2C14) is a walk tracker for the Thames Path.
 - 🍽️ [Restaurant Metrix](https://restaurant-metrix-xiwa.vercel.app/) is a restaurant rating aggregator.

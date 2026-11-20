@@ -10,7 +10,9 @@ export const TILES = [
   {
     emoji: "🥔",
     title: "Poteto Mode",
-    blurb: "The Playbook Quest, a game that explains each playbook.",
+    blurb: "A game that teaches the playbooks in pstack, Lauren Tan's AI coding skills.",
+    description:
+      "The Playbook Quest, a learner's game about the /poteto-mode playbooks in pstack, the AI coding skills Lauren Tan (poteto) built at Cursor. Pick a level and watch the potato walk through the steps, or turn on CS mode for a harder version.",
     href: "https://georgeroberts1.github.io/poteto-playbook-quest/",
     corners: [[356, 335], [434, 319], [439, 366], [363, 383]],
   },
