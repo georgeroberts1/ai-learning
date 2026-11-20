@@ -29,7 +29,7 @@ Either way, give the entry the four corners of a tile on the photo (clockwise fr
 Each one lives in its own repo and is linked from a tile.
 
 - 🥔 [Poteto Mode: the Playbook Quest](https://georgeroberts1.github.io/poteto-playbook-quest/) ([repo](https://github.com/georgeroberts1/poteto-playbook-quest)) is a learner's game about the `/poteto-mode` playbooks in [pstack](https://github.com/cursor/plugins/tree/main/pstack), the AI coding skills Lauren Tan (poteto) built at Cursor. It has a harder CS mode.
-- ⭐ [Brushing Stars](https://brushing-stars.vercel.app/) is a mobile-first tooth brushing tracker for young children.
+- 🪥 [Brushing Stars](https://brushing-stars.vercel.app/) is a mobile-first tooth brushing tracker for young children.
 - 🚶 [Thames Path](https://walk-tracker-omega.vercel.app/?completed=7%2C8%2C9%2C10%2C11%2C12%2C13%2C14) is a walk tracker for the Thames Path.
 - 🍽️ [Restaurant Metrix](https://restaurant-metrix-xiwa.vercel.app/) is a restaurant rating aggregator.
 - 🎶 [Choirmash](https://choirmash-v2.vercel.app/) is an app for choir singers to sing together remotely.
