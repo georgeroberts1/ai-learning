@@ -23,4 +23,25 @@ export const TILES = [
     href: "https://brushing-stars.vercel.app/",
     corners: [[568, 413], [615, 401], [617, 436], [571, 451]],
   },
+  {
+    emoji: "🚶",
+    title: "Thames Path",
+    blurb: "A walk tracker for the Thames Path.",
+    href: "https://walk-tracker-omega.vercel.app/?completed=7%2C8%2C9%2C10%2C11%2C12%2C13%2C14",
+    corners: [[498, 218], [554, 210], [555, 248], [500, 257]],
+  },
+  {
+    emoji: "🍽️",
+    title: "Restaurant Metrix",
+    blurb: "A restaurant rating aggregator.",
+    href: "https://restaurant-metrix-xiwa.vercel.app/",
+    corners: [[380, 478], [445, 457], [448, 493], [384, 516]],
+  },
+  {
+    emoji: "🎶",
+    title: "Choirmash",
+    blurb: "An app for choir singers to sing together remotely.",
+    href: "https://choirmash-v2.vercel.app/",
+    corners: [[612, 287], [640, 284], [640, 316], [614, 319]],
+  },
 ];

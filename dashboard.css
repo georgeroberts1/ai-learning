@@ -71,7 +71,7 @@ main { max-width: 1800px; margin: 0 auto; }
 
 @media (max-width: 700px) {
   .tag { display: none; }
-  .pin { clip-path: circle(34px at var(--cx) var(--cy)); }
+  .pin { clip-path: circle(21px at var(--cx) var(--cy)); }
   main { min-height: 100svh; display: flex; flex-direction: column; justify-content: center; padding-block: 16px; }
   .wall { aspect-ratio: 1100 / 1050; }
   .layer { inset: auto; top: 0; left: calc(-300 / 1100 * 100%); width: calc(1400 / 1100 * 100%); height: 100%; }
