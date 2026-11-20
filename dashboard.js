@@ -3,18 +3,23 @@ import { MIRROR, TILES, WALL } from "./tiles.js";
 
 const esc = (s) => s.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 
+const link = (t) => {
+  const external = /^https?:/.test(t.href);
+  return `href="${esc(t.href)}"${external ? ' target="_blank" rel="noopener noreferrer"' : ""}${t.description ? ` aria-label="${esc(`${t.title}. ${t.description}`)}"` : ""}`;
+};
+
 const text = (t) => `<span class="tag-title">${esc(t.title)}</span><span class="tag-blurb">${esc(t.blurb)}</span>`;
 
 const spot = (t, i) => {
   const { points, clip, cx, cy } = geometry(t.corners, WALL);
-  return `<div class="spot" data-id="${i}" style="--cx:${cx}%;--cy:${cy}%;--clip:${clip}">
+  return `<div class="spot" data-id="${i}"${t.side ? ` data-side="${t.side}"` : ""} style="--cx:${cx}%;--cy:${cy}%;--clip:${clip}">
   <svg viewBox="0 0 ${WALL.width} ${WALL.height}" preserveAspectRatio="none" aria-hidden="true"><polygon points="${points}"/></svg>
   <button class="pin" type="button" aria-expanded="false" aria-label="Show ${esc(t.title)}"></button>
-  <a class="tag" href="${esc(t.href)}">${text(t)}</a>
+  <a class="tag" ${link(t)}>${text(t)}</a>
 </div>`;
 };
 
-const card = (t, i) => `<a class="card" data-id="${i}" href="${esc(t.href)}">
+const card = (t, i) => `<a class="card" data-id="${i}" ${link(t)}>
   <span class="card-glyph" aria-hidden="true">${esc(t.emoji)}</span>
   <span class="card-text">${text(t)}</span>
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>

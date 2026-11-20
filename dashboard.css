@@ -51,10 +51,13 @@ main { max-width: 1800px; margin: 0 auto; }
   display: flex; flex-direction: column; gap: .3cqw; padding: .9cqw 1.5cqw 1cqw; width: max-content; max-width: 22cqw;
   background: var(--enamel); color: var(--ink); border-radius: .4cqw;
   box-shadow: inset 0 0 0 .15cqw var(--edge), 0 .8cqw 2cqw -.5cqw rgb(0 0 0 / .6);
-  opacity: 0; visibility: hidden; transform: translateY(-50%) translateX(-1cqw);
+  opacity: 0; visibility: hidden; transform: translateY(-50%) translateX(var(--slide, -1cqw));
   transition: opacity .25s, transform .3s cubic-bezier(.2, .8, .2, 1), visibility 0s .3s;
 }
 .tag::before { content: ""; position: absolute; right: 100%; top: 50%; width: 3.6cqw; height: 1px; background: rgb(255 248 225 / .85); }
+.spot[data-side="left"] { --slide: 1cqw; }
+.spot[data-side="left"] .tag { left: auto; right: calc(100% - var(--cx) + 5.5cqw); }
+.spot[data-side="left"] .tag::before { right: auto; left: 100%; }
 .tag-title { font: 400 max(15px, 2.1cqw)/1.05 var(--serif); font-style: italic; }
 .tag-blurb { font-size: max(10px, 1cqw); line-height: 1.3; color: var(--muted); }
 .spot.open .tag { opacity: 1; visibility: visible; transform: translateY(-50%); transition-delay: 0s; }
