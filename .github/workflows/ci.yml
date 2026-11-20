@@ -21,10 +21,13 @@ jobs:
           repository: cursor/plugins
           path: upstream
           sparse-checkout: pstack/skills/poteto-mode/playbooks
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 24
-      - run: npm test
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test
         env:
           POTETO_PLAYBOOKS: ${{ github.workspace }}/upstream/pstack/skills/poteto-mode/playbooks
 
@@ -43,8 +46,15 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: docs
+          path: dist
       - id: deployment
         uses: actions/deploy-pages@v4

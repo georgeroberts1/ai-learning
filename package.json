@@ -1,9 +1,14 @@
 {
-  "name": "poteto-playbook-quest",
+  "name": "ai-learning",
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "python -m http.server 8000 --directory docs",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "test": "node --test \"tests/*.test.mjs\""
+  },
+  "devDependencies": {
+    "vite": "^8.3.8"
   }
 }

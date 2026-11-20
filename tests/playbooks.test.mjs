@@ -3,10 +3,10 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import { PLAYBOOKS, WORLDS } from "../docs/playbooks-data.js";
-import { esc, renderHome, renderView } from "../docs/render.js";
-import { emptyState, levelFor, pick, reduce, shuffleOrder, XP_ADVANCED, XP_FINISH, XP_ORDER, XP_QUIZ } from "../docs/game.js";
-import { CS } from "../docs/cs-data.js";
+import { PLAYBOOKS, WORLDS } from "../poteto-quest/playbooks-data.js";
+import { esc, renderHome, renderView } from "../poteto-quest/render.js";
+import { emptyState, levelFor, pick, reduce, shuffleOrder, XP_ADVANCED, XP_FINISH, XP_ORDER, XP_QUIZ } from "../poteto-quest/game.js";
+import { CS } from "../poteto-quest/cs-data.js";
 
 // The real playbooks are the spec. POTETO_PLAYBOOKS overrides the installed pstack plugin.
 function playbookDir() {
