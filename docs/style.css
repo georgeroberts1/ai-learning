@@ -73,6 +73,15 @@ button.primary { background: var(--accent); border-color: var(--accent); color: 
 .choice.right { background: var(--good); border-color: var(--good); color: #fff; }
 .choice.wrong { background: var(--bad); border-color: var(--bad); color: #fff; }
 
+.mode.on { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 700; }
+.cs { background: var(--card); border: 2px solid var(--accent); border-radius: 16px; padding: 4px 18px 16px; margin-bottom: 16px; animation: pop .4s ease-out; }
+.cs[hidden] { display: none; }
+.cs pre { background: var(--line); border-radius: 12px; padding: 12px 14px; overflow-x: auto; font-size: .85rem; }
+.cs pre code { background: none; padding: 0; }
+.chips { display: flex; gap: 8px; flex-wrap: wrap; }
+.chip.right { background: var(--good); border-color: var(--good); color: #fff; }
+.chip.wrong { background: var(--bad); border-color: var(--bad); color: #fff; }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }

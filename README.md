@@ -2,6 +2,8 @@
 
 A small game that explains each `/poteto-mode` playbook from [pstack](https://github.com/cursor/plugins/tree/main/pstack) for learners. Pick a level and watch the potato walk through the steps.
 
+Turn on **CS mode** on the home screen for a harder version aimed at computer science students. Each playbook gets a CS lens (a real concept such as Amdahl's law or topological sort, with code), an order-the-steps puzzle, and a harder boss question.
+
 ```text
 npm start    # serves docs/ at http://localhost:8000
 npm test     # one test per playbook, checked against the real playbook files
