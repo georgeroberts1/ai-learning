@@ -1,6 +1,7 @@
 // The wall photo is 1400x1050 here, whatever its file size. Each link is the four corners of
 // one tile on the photo, clockwise from top left, measured in those pixels.
 // Add a link by adding an entry. `href` is an https URL, or a folder here with its own index.html.
+// `hidden: true` keeps a tile off the page; open the page with ?all (or ?show=<title>) to preview it.
 export const WALL = { width: 1400, height: 1050 };
 
 // The glass of the mirror, in the same pixels. The page title is written on it.
@@ -35,6 +36,7 @@ export const TILES = [
   {
     emoji: "🍽️",
     title: "Restaurant Metrix",
+    hidden: true,
     blurb: "A restaurant rating aggregator.",
     href: "https://restaurant-metrix-xiwa.vercel.app/",
     corners: [[380, 478], [445, 457], [448, 493], [384, 516]],
@@ -42,6 +44,7 @@ export const TILES = [
   {
     emoji: "🎶",
     title: "Choirmash",
+    hidden: true,
     blurb: "An app for choir singers to sing together remotely.",
     href: "https://choirmash-v2.vercel.app/",
     corners: [[612, 287], [640, 284], [640, 316], [614, 319]],

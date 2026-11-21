@@ -27,6 +27,10 @@ Built in this repo:
 
 Either way, give the entry the four corners of a tile on the photo (clockwise from top left, in the 1400x1050 pixels of the photo). `pnpm tile 528 232` finds them from any point inside a tile. Keep tiles right of x=300 (phones crop the photo there) and about 120px apart, or the tests fail.
 
+## Hide a tile
+
+Add `hidden: true` to its entry in `tiles.js` and it disappears from the wall and the list once `main` deploys. Hidden tiles still keep their spot and still have to pass the tests. To preview them on the live site, add `?all` to the URL for every hidden tile, or `?show=Choirmash` (titles, comma-separated) for just some. Previewed tiles are drawn dashed.
+
 ## Projects
 
 Each one lives in its own repo and is linked from a tile.
@@ -34,8 +38,8 @@ Each one lives in its own repo and is linked from a tile.
 - 🥔 [Poteto Mode: the Playbook Quest](https://georgeroberts1.github.io/poteto-playbook-quest/) ([repo](https://github.com/georgeroberts1/poteto-playbook-quest)) is a learner's game about the `/poteto-mode` playbooks in [pstack](https://github.com/cursor/plugins/tree/main/pstack), the AI coding skills Lauren Tan (poteto) built at Cursor. It has a harder CS mode.
 - 🪥 [Brushing Stars](https://brushing-stars.vercel.app/) is a mobile-first tooth brushing tracker for young children.
 - 🚶 [Thames Path](https://walk-tracker-omega.vercel.app/?completed=7%2C8%2C9%2C10%2C11%2C12%2C13%2C14) is a walk tracker for the Thames Path.
-- 🍽️ [Restaurant Metrix](https://restaurant-metrix-xiwa.vercel.app/) is a restaurant rating aggregator.
-- 🎶 [Choirmash](https://choirmash-v2.vercel.app/) is an app for choir singers to sing together remotely.
+- 🍽️ [Restaurant Metrix](https://restaurant-metrix-xiwa.vercel.app/) is a restaurant rating aggregator (hidden).
+- 🎶 [Choirmash](https://choirmash-v2.vercel.app/) is an app for choir singers to sing together remotely (hidden).
 - ⚽ [Match Ranker](https://match-ranker.vercel.app/) ranks Premier League football matches.
 - 🔭 [Tonight's Sky](https://georgeroberts1.github.io/tonights-sky/) shows the Moon, planets and stars above your town tonight.
 

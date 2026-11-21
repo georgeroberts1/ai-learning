@@ -29,8 +29,15 @@ const card = (t, i) => `<a class="card" data-id="${i}" ${link(t)}>
 const mirror = geometry(MIRROR, WALL);
 document.querySelector(".mirror").setAttribute("style", `--clip:${mirror.clip};--cx:${mirror.cx}%;--cy:${mirror.cy}%`);
 
-document.getElementById("spots").innerHTML = TILES.map(spot).join("");
-document.getElementById("links").innerHTML = TILES.map(card).join("");
+// Hidden tiles stay off the page unless the URL asks for them: ?all shows every tile,
+// ?show=Choirmash,Restaurant%20Metrix shows those ones. Previewed tiles are drawn dashed.
+const params = new URLSearchParams(location.search);
+const wanted = (params.get("show") ?? "").toLowerCase().split(",").map((s) => s.trim()).filter(Boolean);
+const shown = TILES.filter((t) => !t.hidden || params.has("all") || wanted.includes(t.title.toLowerCase()));
+const mark = (html, t) => (t.hidden ? html.replace(/^<(div|a) class="(spot|card)"/, '<$1 class="$2 preview"') : html);
+
+document.getElementById("spots").innerHTML = shown.map((t, i) => mark(spot(t, i), t)).join("");
+document.getElementById("links").innerHTML = shown.map((t, i) => mark(card(t, i), t)).join("");
 
 const setOpen = (id) => {
   for (const el of document.querySelectorAll("[data-id]")) el.classList.toggle("open", el.dataset.id === id);

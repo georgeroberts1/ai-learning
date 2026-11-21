@@ -91,3 +91,7 @@ main { max-width: 1800px; margin: 0 auto; }
 }
 @keyframes rise { from { opacity: 0; transform: translateY(8px); } }
 @media (prefers-reduced-motion: reduce) { .card.open { animation: none; } .tag, .glyph { transition: none; } }
+
+/* A hidden tile shown with ?all or ?show= */
+.spot.preview polygon { stroke-dasharray: 6 4; }
+.card.preview { opacity: .6; border-style: dashed; }
