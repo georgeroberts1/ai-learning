@@ -21,6 +21,14 @@ test("external tile links use https", () => {
   for (const t of TILES.filter((t) => /^https?:/.test(t.href))) assert.equal(new URL(t.href).protocol, "https:", `${t.title} must link over https`);
 });
 
+test("hidden is true or left out", () => {
+  for (const t of TILES) assert.ok(t.hidden === undefined || t.hidden === true, `${t.title}: write hidden: true, or remove it`);
+});
+
+test("at least one tile is shown", () => {
+  assert.ok(TILES.some((t) => !t.hidden), "every tile is hidden");
+});
+
 test("every tile has four corners inside the photo", () => {
   for (const t of TILES) {
     assert.equal(t.corners.length, 4, `${t.title} needs four corners`);
